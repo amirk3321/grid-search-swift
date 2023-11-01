@@ -14,6 +14,9 @@
 		0CBC3C7A2AF10A020098F09D /* GridSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC3C792AF10A020098F09D /* GridSearchTests.swift */; };
 		0CBC3C842AF10A020098F09D /* GridSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC3C832AF10A020098F09D /* GridSearchUITests.swift */; };
 		0CBC3C862AF10A020098F09D /* GridSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC3C852AF10A020098F09D /* GridSearchUITestsLaunchTests.swift */; };
+		0CBC3CE32AF1A2F10098F09D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0CBC3CE22AF1A2F10098F09D /* Kingfisher */; };
+		0CD070F32AF23114008C02DC /* GridSerachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD070F22AF23114008C02DC /* GridSerachModel.swift */; };
+		0CD070F52AF23132008C02DC /* GridSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD070F42AF23132008C02DC /* GridSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		0CBC3C7F2AF10A020098F09D /* GridSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBC3C832AF10A020098F09D /* GridSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSearchUITests.swift; sourceTree = "<group>"; };
 		0CBC3C852AF10A020098F09D /* GridSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0CD070F22AF23114008C02DC /* GridSerachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSerachModel.swift; sourceTree = "<group>"; };
+		0CD070F42AF23132008C02DC /* GridSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBC3CE32AF1A2F10098F09D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +100,10 @@
 		0CBC3C672AF10A000098F09D /* GridSearch */ = {
 			isa = PBXGroup;
 			children = (
+				0CBC3C942AF127260098F09D /* viewmodels */,
+				0CBC3C932AF127170098F09D /* views */,
+				0CBC3C922AF1270F0098F09D /* models */,
 				0CBC3C682AF10A000098F09D /* GridSearchApp.swift */,
-				0CBC3C6A2AF10A000098F09D /* ContentView.swift */,
 				0CBC3C6C2AF10A020098F09D /* Assets.xcassets */,
 				0CBC3C6E2AF10A020098F09D /* Preview Content */,
 			);
@@ -127,6 +135,30 @@
 			path = GridSearchUITests;
 			sourceTree = "<group>";
 		};
+		0CBC3C922AF1270F0098F09D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0CD070F22AF23114008C02DC /* GridSerachModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		0CBC3C932AF127170098F09D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0CBC3C6A2AF10A000098F09D /* ContentView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0CBC3C942AF127260098F09D /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				0CD070F42AF23132008C02DC /* GridSearchViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +175,9 @@
 			dependencies = (
 			);
 			name = GridSearch;
+			packageProductDependencies = (
+				0CBC3CE22AF1A2F10098F09D /* Kingfisher */,
+			);
 			productName = GridSearch;
 			productReference = 0CBC3C652AF10A000098F09D /* GridSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +250,9 @@
 				Base,
 			);
 			mainGroup = 0CBC3C5C2AF10A000098F09D;
+			packageReferences = (
+				0CBC3CE12AF1A2F10098F09D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 0CBC3C662AF10A000098F09D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD070F52AF23132008C02DC /* GridSearchViewModel.swift in Sources */,
 				0CBC3C6B2AF10A000098F09D /* ContentView.swift in Sources */,
+				0CD070F32AF23114008C02DC /* GridSerachModel.swift in Sources */,
 				0CBC3C692AF10A000098F09D /* GridSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +464,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GridSearch/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "I want to acess photo to update your profile";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,7 +475,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GridSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GridSearch-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -452,6 +493,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GridSearch/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "I want to acess photo to update your profile";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,7 +504,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GridSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GridSearch-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -582,6 +624,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0CBC3CE12AF1A2F10098F09D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0CBC3CE22AF1A2F10098F09D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CBC3CE12AF1A2F10098F09D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0CBC3C5D2AF10A000098F09D /* Project object */;
 }
